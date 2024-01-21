@@ -608,7 +608,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 
 	int written = 0;
 	int remain_size = tmpbuf_size;
-	while (tmpbuf_size >= 1)
+	while (remain_size >= 1)
 	{
 		int rc = write(conn->socket_fd, tmpbuf + written, remain_size);
 
