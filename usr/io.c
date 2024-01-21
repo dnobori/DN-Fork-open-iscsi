@@ -651,14 +651,20 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	{
 		if (1)
 		{
-			int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes;
+			struct iscsi_hdr noop_header = { 0 };
+			noop_header.opcode = ISCSI_OP_NOOP_OUT;
+			noop_header.lun = hdr->lun;
+			noop_header.itt = hdr->itt;
+			noop_header.statsn = hdr->statsn;
+			noop_header.exp_statsn = hdr->exp_statsn;
+
+			int tmpbuf_size = sizeof(noop_header);
 
 			tmpbuf = malloc(tmpbuf_size);
 
 			memset(tmpbuf, 0, tmpbuf_size);
 
-			memcpy(tmpbuf, header, sizeof(*hdr) + hdr->hlength);
-			memcpy(tmpbuf + sizeof(*hdr) + hdr->hlength, data, ntoh24(hdr->dlength));
+			memcpy(tmpbuf, noop_header, sizeof(noop_header));
 
 			int written = 0;
 			int remain_size = tmpbuf_size;
