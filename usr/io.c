@@ -585,6 +585,8 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	/* send the PDU header */
 	header = (char *) hdr;
 	end = header + sizeof (*hdr) + hdr->hlength;
+	end++;
+	end--;
 
 	/* send all the data and any padding */
 	if (pdu_length % ISCSI_PAD_LEN)
