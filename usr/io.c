@@ -518,7 +518,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	struct iovec vec[3];
 	int pad_bytes;
 	int pdu_length = sizeof (*hdr) + hdr->hlength + ntoh24(hdr->dlength);
-	int remaining;
+	int remaining = 0;
 	struct sigaction action;
 	struct sigaction old;
 	iscsi_session_t *session = conn->session;
