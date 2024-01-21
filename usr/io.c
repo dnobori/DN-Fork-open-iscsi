@@ -597,7 +597,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	if (session->use_ipc)
 		ipc->send_pdu_begin(session->t->handle, session->id,
 				    conn->id, (sizeof(*hdr) + hdr->hlength) + (ntoh24(hdr->dlength) + pad_bytes),
-			0
+			4
 				    //ntoh24(hdr->dlength) + pad_bytes
 		);
 
