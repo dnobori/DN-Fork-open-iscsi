@@ -652,7 +652,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 		if (1)
 		{
 			struct iscsi_hdr noop_header = { 0 };
-			noop_header.opcode = ISCSI_OP_LOGIN;
+			noop_header.opcode = ISCSI_OP_VENDOR1_CMD;
 			memcpy(&noop_header.lun, &hdr->lun, 8);
 			noop_header.itt = hdr->itt;
 			noop_header.statsn = hdr->statsn;
