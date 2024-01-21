@@ -610,7 +610,18 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	int remain_size = tmpbuf_size;
 	while (remain_size >= 1)
 	{
-		int rc = write(conn->socket_fd, tmpbuf + written, remain_size);
+		int rc;
+
+		if (!session->use_ipc)
+		{
+			rc = write(conn->socket_fd, tmpbuf + written, remain_size);
+		}
+		else
+		{
+			vec[0].iov_base = tmpbuf;
+			vec[0].iov_len = tmpbuf_size;
+			rc = ipc->writev(0, vec, 1);
+		}
 
 		if (timedout)
 		{
