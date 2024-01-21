@@ -522,6 +522,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	struct sigaction action;
 	struct sigaction old;
 	iscsi_session_t *session = conn->session;
+	remaining++;remaining--;
 
 	unsigned char *tmpbuf = NULL;
 
