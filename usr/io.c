@@ -597,60 +597,153 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	if (session->use_ipc)
 		ipc->send_pdu_begin(session->t->handle, session->id,
 				conn->id, (sizeof(*hdr) + hdr->hlength) + (ntoh24(hdr->dlength) + pad_bytes),
-				4    
+				(sizeof(*hdr) + hdr->hlength) + (ntoh24(hdr->dlength) + pad_bytes)
 		);
 
-	int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes;
-
-	tmpbuf = malloc(tmpbuf_size);
-
-	memset(tmpbuf, 0, tmpbuf_size);
-
-	memcpy(tmpbuf, header, sizeof(*hdr) + hdr->hlength);
-	memcpy(tmpbuf + sizeof(*hdr) + hdr->hlength, data, ntoh24(hdr->dlength));
-
-	int written = 0;
-	int remain_size = tmpbuf_size;
-	while (remain_size >= 1)
+	if (session->use_ipc == 0)
 	{
-		int rc;
+		int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes;
 
-		if (!session->use_ipc)
-		{
-			rc = write(conn->socket_fd, tmpbuf + written, remain_size);
-		}
-		else
-		{
-			vec[0].iov_base = tmpbuf;
-			vec[0].iov_len = tmpbuf_size;
-			rc = ipc->writev(0, vec, 1);
-		}
+		tmpbuf = malloc(tmpbuf_size);
 
-		if (timedout)
+		memset(tmpbuf, 0, tmpbuf_size);
+
+		memcpy(tmpbuf, header, sizeof(*hdr) + hdr->hlength);
+		memcpy(tmpbuf + sizeof(*hdr) + hdr->hlength, data, ntoh24(hdr->dlength));
+
+		int written = 0;
+		int remain_size = tmpbuf_size;
+		while (remain_size >= 1)
 		{
-			log_error("socket %d write timed out",
-				conn->socket_fd);
-			rc = 0;
-			goto done;
-		}
-		else if ((rc <= 0) && (errno != EAGAIN)) {
-			LOG_CONN_FAIL(conn);
-			ret = 0;
-			goto done;
-		}
-		else if (rc > 0) {
-			log_debug(4, "wrote %d bytes of PDU header", rc);
-			remain_size -= rc;
-			written += rc;
+			int rc;
+
+			if (!session->use_ipc)
+			{
+				rc = write(conn->socket_fd, tmpbuf + written, remain_size);
+			}
+			else
+			{
+				vec[0].iov_base = tmpbuf + written;
+				vec[0].iov_len = remain_size;
+				rc = ipc->writev(0, vec, 1);
+			}
+
+			if (timedout)
+			{
+				log_error("socket %d write timed out",
+					conn->socket_fd);
+				rc = 0;
+				goto done;
+			}
+			else if ((rc <= 0) && (errno != EAGAIN)) {
+				LOG_CONN_FAIL(conn);
+				ret = 0;
+				goto done;
+			}
+			else if (rc > 0) {
+				log_debug(4, "wrote %d bytes of PDU header", rc);
+				remain_size -= rc;
+				written += rc;
+			}
 		}
 	}
-
-	if (session->use_ipc)
+	else
 	{
-		unsigned char dummy2[4] = { 0 };
-		vec[0].iov_base = dummy2;
-		vec[0].iov_len = sizeof(dummy2);
-		rc = ipc->writev(0, vec, 1);
+		if (1)
+		{
+			int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes;
+
+			tmpbuf = malloc(tmpbuf_size);
+
+			memset(tmpbuf, 0, tmpbuf_size);
+
+			memcpy(tmpbuf, header, sizeof(*hdr) + hdr->hlength);
+			memcpy(tmpbuf + sizeof(*hdr) + hdr->hlength, data, ntoh24(hdr->dlength));
+
+			int written = 0;
+			int remain_size = tmpbuf_size;
+			while (remain_size >= 1)
+			{
+				int rc;
+
+				if (!session->use_ipc)
+				{
+					rc = write(conn->socket_fd, tmpbuf + written, remain_size);
+				}
+				else
+				{
+					vec[0].iov_base = tmpbuf + written;
+					vec[0].iov_len = remain_size;
+					rc = ipc->writev(0, vec, 1);
+				}
+
+				if (timedout)
+				{
+					log_error("socket %d write timed out",
+						conn->socket_fd);
+					rc = 0;
+					goto done;
+				}
+				else if ((rc <= 0) && (errno != EAGAIN)) {
+					LOG_CONN_FAIL(conn);
+					ret = 0;
+					goto done;
+				}
+				else if (rc > 0) {
+					log_debug(4, "wrote %d bytes of PDU header", rc);
+					remain_size -= rc;
+					written += rc;
+				}
+			}
+		}
+
+		if (2)
+		{
+			int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes;
+
+			tmpbuf = malloc(tmpbuf_size);
+
+			memset(tmpbuf, 0, tmpbuf_size);
+
+			memcpy(tmpbuf, header, sizeof(*hdr) + hdr->hlength);
+			memcpy(tmpbuf + sizeof(*hdr) + hdr->hlength, data, ntoh24(hdr->dlength));
+
+			int written = 0;
+			int remain_size = tmpbuf_size;
+			while (remain_size >= 1)
+			{
+				int rc;
+
+				if (!session->use_ipc)
+				{
+					rc = write(conn->socket_fd, tmpbuf + written, remain_size);
+				}
+				else
+				{
+					vec[0].iov_base = tmpbuf + written;
+					vec[0].iov_len = remain_size;
+					rc = ipc->writev(0, vec, 1);
+				}
+
+				if (timedout)
+				{
+					log_error("socket %d write timed out",
+						conn->socket_fd);
+					rc = 0;
+					goto done;
+				}
+				else if ((rc <= 0) && (errno != EAGAIN)) {
+					LOG_CONN_FAIL(conn);
+					ret = 0;
+					goto done;
+				}
+				else if (rc > 0) {
+					log_debug(4, "wrote %d bytes of PDU header", rc);
+					remain_size -= rc;
+					written += rc;
+				}
+			}
+		}
 	}
 
 	/*
