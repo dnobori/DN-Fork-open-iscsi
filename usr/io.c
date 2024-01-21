@@ -597,10 +597,10 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 	if (session->use_ipc)
 		ipc->send_pdu_begin(session->t->handle, session->id,
 				conn->id, (sizeof(*hdr) + hdr->hlength) + (ntoh24(hdr->dlength) + pad_bytes),
-				8    
+				4    
 		);
 
-	int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes + (session->use_ipc ? 8 : 0);
+	int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes;
 
 	tmpbuf = malloc(tmpbuf_size);
 
@@ -643,6 +643,14 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 			remain_size -= rc;
 			written += rc;
 		}
+	}
+
+	if (session->use_ipc)
+	{
+		unsigned char dummy2[4] = { 0 };
+		vec[0].iov_base = dummy2;
+		vec[0].iov_len = sizeof(dummy2);
+		rc = ipc->writev(0, vec, 1);
 	}
 
 	/*
