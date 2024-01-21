@@ -600,7 +600,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 				8    
 		);
 
-	int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes + 8;
+	int tmpbuf_size = sizeof(*hdr) + hdr->hlength + ntoh24(hdr->dlength) + pad_bytes + (session->use_ipc ? 8 : 0);
 
 	tmpbuf = malloc(tmpbuf_size);
 
