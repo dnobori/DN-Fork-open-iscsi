@@ -664,7 +664,7 @@ iscsi_io_send_pdu(iscsi_conn_t *conn,
 
 			memset(tmpbuf, 0, tmpbuf_size);
 
-			memcpy(tmpbuf, &noop_header, sizeof(noop_header));
+			memcpy(tmpbuf, header, sizeof(noop_header));
 
 			int written = 0;
 			int remain_size = tmpbuf_size;
