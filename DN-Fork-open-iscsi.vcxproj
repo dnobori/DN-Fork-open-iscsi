@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{9E23E2AA-BAF5-4CF7-9DFD-7889B9912A3E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DN-Fork-open-iscsi</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);__KERNEL__</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/include;$(ProjectDir)/iscsiuio/src/apps/brcm-iscsi;$(ProjectDir)/iscsiuio/src/apps/dhcpc;$(ProjectDir)/iscsiuio/src/uip;$(ProjectDir)/iscsiuio/src/unix;$(ProjectDir)/iscsiuio/src/unix/libs;$(ProjectDir)/libopeniscsiusr;$(ProjectDir)/libopeniscsiusr/libopeniscsiusr;$(ProjectDir)/usr;$(ProjectDir)/usr/fwparam_ibft;$(ProjectDir)/utils;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\fw_context.h" />
+    <ClInclude Include="include\iscsi_err.h" />
+    <ClInclude Include="include\iscsi_if.h" />
+    <ClInclude Include="include\iscsi_net_util.h" />
+    <ClInclude Include="include\iscsi_proto.h" />
+    <ClInclude Include="include\list.h" />
+    <ClInclude Include="include\sysdeps.h" />
+    <ClInclude Include="iscsiuio\src\apps\brcm-iscsi\brcm_iscsi.h" />
+    <ClInclude Include="iscsiuio\src\apps\dhcpc\dhcpc.h" />
+    <ClInclude Include="iscsiuio\src\apps\dhcpc\dhcpv6.h" />
+    <ClInclude Include="iscsiuio\src\uip\clock.h" />
+    <ClInclude Include="iscsiuio\src\uip\debug.h" />
+    <ClInclude Include="iscsiuio\src\uip\icmpv6.h" />
+    <ClInclude Include="iscsiuio\src\uip\ipv6.h" />
+    <ClInclude Include="iscsiuio\src\uip\ipv6_ndpc.h" />
+    <ClInclude Include="iscsiuio\src\uip\ipv6_pkt.h" />
+    <ClInclude Include="iscsiuio\src\uip\lc.h" />
+    <ClInclude Include="iscsiuio\src\uip\lc-addrlabels.h" />
+    <ClInclude Include="iscsiuio\src\uip\lc-switch.h" />
+    <ClInclude Include="iscsiuio\src\uip\psock.h" />
+    <ClInclude Include="iscsiuio\src\uip\pt.h" />
+    <ClInclude Include="iscsiuio\src\uip\timer.h" />
+    <ClInclude Include="iscsiuio\src\uip\uip.h" />
+    <ClInclude Include="iscsiuio\src\uip\uip_arch.h" />
+    <ClInclude Include="iscsiuio\src\uip\uip_arp.h" />
+    <ClInclude Include="iscsiuio\src\uip\uip_eth.h" />
+    <ClInclude Include="iscsiuio\src\uip\uip-neighbor.h" />
+    <ClInclude Include="iscsiuio\src\uip\uipopt.h" />
+    <ClInclude Include="iscsiuio\src\unix\libs\bnx2.h" />
+    <ClInclude Include="iscsiuio\src\unix\libs\bnx2x.h" />
+    <ClInclude Include="iscsiuio\src\unix\libs\cnic.h" />
+    <ClInclude Include="iscsiuio\src\unix\libs\qedi.h" />
+    <ClInclude Include="iscsiuio\src\unix\clock-arch.h" />
+    <ClInclude Include="iscsiuio\src\unix\iscsid_ipc.h" />
+    <ClInclude Include="iscsiuio\src\unix\logger.h" />
+    <ClInclude Include="iscsiuio\src\unix\nic.h" />
+    <ClInclude Include="iscsiuio\src\unix\nic_id.h" />
+    <ClInclude Include="iscsiuio\src\unix\nic_nl.h" />
+    <ClInclude Include="iscsiuio\src\unix\nic_utils.h" />
+    <ClInclude Include="iscsiuio\src\unix\nic_vlan.h" />
+    <ClInclude Include="iscsiuio\src\unix\options.h" />
+    <ClInclude Include="iscsiuio\src\unix\packet.h" />
+    <ClInclude Include="iscsiuio\src\unix\ping.h" />
+    <ClInclude Include="iscsiuio\src\unix\uip-conf.h" />
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr.h" />
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_common.h" />
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_iface.h" />
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_node.h" />
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_session.h" />
+    <ClInclude Include="libopeniscsiusr\context.h" />
+    <ClInclude Include="libopeniscsiusr\default.h" />
+    <ClInclude Include="libopeniscsiusr\idbm.h" />
+    <ClInclude Include="libopeniscsiusr\idbm_fields.h" />
+    <ClInclude Include="libopeniscsiusr\iface.h" />
+    <ClInclude Include="libopeniscsiusr\misc.h" />
+    <ClInclude Include="libopeniscsiusr\node.h" />
+    <ClInclude Include="libopeniscsiusr\rfc.h" />
+    <ClInclude Include="libopeniscsiusr\sysfs.h" />
+    <ClInclude Include="usr\fwparam_ibft\fwparam.h" />
+    <ClInclude Include="usr\fwparam_ibft\iscsi_obp.h" />
+    <ClInclude Include="usr\fwparam_ibft\prom_parse.h" />
+    <ClInclude Include="usr\fwparam_ibft\prom_parse.tab.h" />
+    <ClInclude Include="usr\actor.h" />
+    <ClInclude Include="usr\auth.h" />
+    <ClInclude Include="usr\be2iscsi.h" />
+    <ClInclude Include="usr\config.h" />
+    <ClInclude Include="usr\cxgbi.h" />
+    <ClInclude Include="usr\discovery.h" />
+    <ClInclude Include="usr\discoveryd.h" />
+    <ClInclude Include="usr\ethtool-copy.h" />
+    <ClInclude Include="usr\event_poll.h" />
+    <ClInclude Include="usr\flashnode.h" />
+    <ClInclude Include="usr\host.h" />
+    <ClInclude Include="usr\idbm.h" />
+    <ClInclude Include="usr\idbm_fields.h" />
+    <ClInclude Include="usr\iface.h" />
+    <ClInclude Include="usr\initiator.h" />
+    <ClInclude Include="usr\iscsi_ipc.h" />
+    <ClInclude Include="usr\iscsi_netlink.h" />
+    <ClInclude Include="usr\iscsi_settings.h" />
+    <ClInclude Include="usr\iscsi_sysfs.h" />
+    <ClInclude Include="usr\iscsi_timer.h" />
+    <ClInclude Include="usr\iscsi_util.h" />
+    <ClInclude Include="usr\iscsid.h" />
+    <ClInclude Include="usr\iscsid_req.h" />
+    <ClInclude Include="usr\iser.h" />
+    <ClInclude Include="usr\kern_err_table.h" />
+    <ClInclude Include="usr\local_strings.h" />
+    <ClInclude Include="usr\log.h" />
+    <ClInclude Include="usr\mgmt_ipc.h" />
+    <ClInclude Include="usr\scsi.h" />
+    <ClInclude Include="usr\session_info.h" />
+    <ClInclude Include="usr\session_mgmt.h" />
+    <ClInclude Include="usr\sysfs.h" />
+    <ClInclude Include="usr\transport.h" />
+    <ClInclude Include="usr\types.h" />
+    <ClInclude Include="usr\uip_mgmt_ipc.h" />
+    <ClInclude Include="usr\version.h" />
+    <ClInclude Include="utils\md5.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="iscsiuio\src\apps\brcm-iscsi\brcm_iscsi.c" />
+    <ClCompile Include="iscsiuio\src\apps\dhcpc\dhcpc.c" />
+    <ClCompile Include="iscsiuio\src\apps\dhcpc\dhcpv6.c" />
+    <ClCompile Include="iscsiuio\src\uip\ipv6.c" />
+    <ClCompile Include="iscsiuio\src\uip\ipv6_ndpc.c" />
+    <ClCompile Include="iscsiuio\src\uip\psock.c" />
+    <ClCompile Include="iscsiuio\src\uip\timer.c" />
+    <ClCompile Include="iscsiuio\src\uip\uip.c" />
+    <ClCompile Include="iscsiuio\src\uip\uip_arp.c" />
+    <ClCompile Include="iscsiuio\src\uip\uip_eth.c" />
+    <ClCompile Include="iscsiuio\src\uip\uip-neighbor.c" />
+    <ClCompile Include="iscsiuio\src\unix\libs\bnx2.c" />
+    <ClCompile Include="iscsiuio\src\unix\libs\bnx2x.c" />
+    <ClCompile Include="iscsiuio\src\unix\libs\cnic.c" />
+    <ClCompile Include="iscsiuio\src\unix\libs\qedi.c" />
+    <ClCompile Include="iscsiuio\src\unix\clock-arch.c" />
+    <ClCompile Include="iscsiuio\src\unix\iscsid_ipc.c" />
+    <ClCompile Include="iscsiuio\src\unix\logger.c" />
+    <ClCompile Include="iscsiuio\src\unix\main.c" />
+    <ClCompile Include="iscsiuio\src\unix\nic.c" />
+    <ClCompile Include="iscsiuio\src\unix\nic_id.c" />
+    <ClCompile Include="iscsiuio\src\unix\nic_nl.c" />
+    <ClCompile Include="iscsiuio\src\unix\nic_utils.c" />
+    <ClCompile Include="iscsiuio\src\unix\nic_vlan.c" />
+    <ClCompile Include="iscsiuio\src\unix\packet.c" />
+    <ClCompile Include="iscsiuio\src\unix\ping.c" />
+    <ClCompile Include="libopeniscsiusr\tests\test_context.c" />
+    <ClCompile Include="libopeniscsiusr\tests\test_iface.c" />
+    <ClCompile Include="libopeniscsiusr\tests\test_node.c" />
+    <ClCompile Include="libopeniscsiusr\tests\test_session.c" />
+    <ClCompile Include="libopeniscsiusr\context.c" />
+    <ClCompile Include="libopeniscsiusr\default.c" />
+    <ClCompile Include="libopeniscsiusr\idbm.c" />
+    <ClCompile Include="libopeniscsiusr\iface.c" />
+    <ClCompile Include="libopeniscsiusr\misc.c" />
+    <ClCompile Include="libopeniscsiusr\node.c" />
+    <ClCompile Include="libopeniscsiusr\session.c" />
+    <ClCompile Include="libopeniscsiusr\sysfs.c" />
+    <ClCompile Include="sysdeps\sysdeps.c" />
+    <ClCompile Include="usr\fwparam_ibft\fw_entry.c" />
+    <ClCompile Include="usr\fwparam_ibft\fwparam_ppc.c" />
+    <ClCompile Include="usr\fwparam_ibft\fwparam_sysfs.c" />
+    <ClCompile Include="usr\fwparam_ibft\prom_lex.c" />
+    <ClCompile Include="usr\fwparam_ibft\prom_parse.tab.c" />
+    <ClCompile Include="usr\actor.c" />
+    <ClCompile Include="usr\auth.c" />
+    <ClCompile Include="usr\be2iscsi.c" />
+    <ClCompile Include="usr\cxgbi.c" />
+    <ClCompile Include="usr\discovery.c" />
+    <ClCompile Include="usr\discoveryd.c" />
+    <ClCompile Include="usr\event_poll.c" />
+    <ClCompile Include="usr\flashnode.c" />
+    <ClCompile Include="usr\host.c" />
+    <ClCompile Include="usr\idbm.c" />
+    <ClCompile Include="usr\iface.c" />
+    <ClCompile Include="usr\initiator.c" />
+    <ClCompile Include="usr\initiator_common.c" />
+    <ClCompile Include="usr\io.c" />
+    <ClCompile Include="usr\iscsi_err.c" />
+    <ClCompile Include="usr\iscsi_net_util.c" />
+    <ClCompile Include="usr\iscsi_sysfs.c" />
+    <ClCompile Include="usr\iscsi_timer.c" />
+    <ClCompile Include="usr\iscsi_util.c" />
+    <ClCompile Include="usr\iscsiadm.c" />
+    <ClCompile Include="usr\iscsid.c" />
+    <ClCompile Include="usr\iscsid_req.c" />
+    <ClCompile Include="usr\iscsistart.c" />
+    <ClCompile Include="usr\iser.c" />
+    <ClCompile Include="usr\kern_err_table.c" />
+    <ClCompile Include="usr\local_strings.c" />
+    <ClCompile Include="usr\log.c" />
+    <ClCompile Include="usr\login.c" />
+    <ClCompile Include="usr\mgmt_ipc.c" />
+    <ClCompile Include="usr\mntcheck.c" />
+    <ClCompile Include="usr\netlink.c" />
+    <ClCompile Include="usr\scsi.c" />
+    <ClCompile Include="usr\session_info.c" />
+    <ClCompile Include="usr\session_mgmt.c" />
+    <ClCompile Include="usr\sysfs.c" />
+    <ClCompile Include="usr\transport.c" />
+    <ClCompile Include="usr\uip_mgmt_ipc.c" />
+    <ClCompile Include="utils\iscsi-iname.c" />
+    <ClCompile Include="utils\md5.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\.gitignore" />
+    <None Include="doc\iscsi_discovery.8" />
+    <None Include="doc\iscsi_fw_login.8" />
+    <None Include="doc\iscsiadm.8.template" />
+    <None Include="doc\iscsid.8.template" />
+    <None Include="doc\iscsi-gen-initiatorname.8.template" />
+    <None Include="doc\iscsi-iname.8.template" />
+    <None Include="doc\iscsistart.8.template" />
+    <None Include="doc\Makefile" />
+    <None Include="doc\meson.build" />
+    <None Include="etc\initd\initd.debian" />
+    <None Include="etc\initd\initd.redhat" />
+    <None Include="etc\systemd\.gitignore" />
+    <None Include="etc\systemd\ibft-rule-generator" />
+    <None Include="etc\systemd\iscsi.service.template" />
+    <None Include="etc\systemd\iscsid.service.template" />
+    <None Include="etc\systemd\iscsid.socket" />
+    <None Include="etc\systemd\iscsi-init.service.template" />
+    <None Include="etc\systemd\iscsiuio.service.template" />
+    <None Include="etc\systemd\iscsiuio.socket" />
+    <None Include="etc\systemd\meson.build" />
+    <None Include="etc\iface.example" />
+    <None Include="etc\iscsid.conf" />
+    <None Include="etc\Makefile" />
+    <None Include="etc\meson.build" />
+    <None Include="iscsiuio\docs\iscsiuio.8" />
+    <None Include="iscsiuio\docs\meson.build" />
+    <None Include="iscsiuio\src\apps\brcm-iscsi\Makefile.am" />
+    <None Include="iscsiuio\src\apps\brcm-iscsi\Makefile.brcm-iscsi" />
+    <None Include="iscsiuio\src\apps\brcm-iscsi\meson.build" />
+    <None Include="iscsiuio\src\apps\dhcpc\Makefile.am" />
+    <None Include="iscsiuio\src\apps\dhcpc\Makefile.dhcpc" />
+    <None Include="iscsiuio\src\apps\dhcpc\meson.build" />
+    <None Include="iscsiuio\src\apps\Makefile.am" />
+    <None Include="iscsiuio\src\apps\meson.build" />
+    <None Include="iscsiuio\src\apps\README" />
+    <None Include="iscsiuio\src\uip\Makefile.am" />
+    <None Include="iscsiuio\src\uip\Makefile.include" />
+    <None Include="iscsiuio\src\uip\meson.build" />
+    <None Include="iscsiuio\src\unix\libs\Makefile.am" />
+    <None Include="iscsiuio\src\unix\libs\meson.build" />
+    <None Include="iscsiuio\src\unix\.gitignore" />
+    <None Include="iscsiuio\src\unix\build_date.sh" />
+    <None Include="iscsiuio\src\unix\Makefile.am" />
+    <None Include="iscsiuio\src\unix\meson.build" />
+    <None Include="iscsiuio\src\.gitignore" />
+    <None Include="iscsiuio\src\Makefile.am" />
+    <None Include="iscsiuio\src\meson.build" />
+    <None Include="iscsiuio\src\README" />
+    <None Include="iscsiuio\src\uip-1.0-changelog.txt" />
+    <None Include="iscsiuio\.gitignore" />
+    <None Include="iscsiuio\AUTHORS" />
+    <None Include="iscsiuio\ChangeLog" />
+    <None Include="iscsiuio\configure.ac" />
+    <None Include="iscsiuio\INSTALL" />
+    <None Include="iscsiuio\iscsiuiolog" />
+    <None Include="iscsiuio\Makefile.am" />
+    <None Include="iscsiuio\meson.build" />
+    <None Include="iscsiuio\NEWS" />
+    <None Include="iscsiuio\README" />
+    <None Include="iscsiuio\RELEASE.TXT" />
+    <None Include="libopeniscsiusr\docs\kernel-doc" />
+    <None Include="libopeniscsiusr\docs\libopeniscsiusr.h.3" />
+    <None Include="libopeniscsiusr\docs\list-man-pages.sh" />
+    <None Include="libopeniscsiusr\docs\meson.build" />
+    <None Include="libopeniscsiusr\libopeniscsiusr\meson.build" />
+    <None Include="libopeniscsiusr\tests\meson.build" />
+    <None Include="libopeniscsiusr\tests\runtest.sh" />
+    <None Include="libopeniscsiusr\COPYING" />
+    <None Include="libopeniscsiusr\libopeniscsiusr.pc.in" />
+    <None Include="libopeniscsiusr\Makefile" />
+    <None Include="libopeniscsiusr\meson.build" />
+    <None Include="libopeniscsiusr\TODO" />
+    <None Include="sysdeps\Makefile" />
+    <None Include="sysdeps\meson.build" />
+    <None Include="test\harness\.gitignore" />
+    <None Include="test\harness\__init__.py" />
+    <None Include="test\harness\iscsi.py" />
+    <None Include="test\harness\tests.py" />
+    <None Include="test\harness\util.py" />
+    <None Include="test\.gitignore" />
+    <None Include="test\README" />
+    <None Include="test\README.orig" />
+    <None Include="test\regression.dat" />
+    <None Include="test\regression.sh" />
+    <None Include="test\test-open-iscsi.py" />
+    <None Include="test\TODO" />
+    <None Include="usr\fwparam_ibft\Makefile" />
+    <None Include="usr\fwparam_ibft\meson.build" />
+    <None Include="usr\fwparam_ibft\prom_lex.l" />
+    <None Include="usr\fwparam_ibft\prom_parse.y" />
+    <None Include="usr\fwparam_ibft\README" />
+    <None Include="usr\.gitignore" />
+    <None Include="usr\Makefile" />
+    <None Include="usr\meson.build" />
+    <None Include="utils\.gitignore" />
+    <None Include="utils\50-iscsi-firmware-login.rules.template" />
+    <None Include="utils\iscsi_discovery.sh" />
+    <None Include="utils\iscsi_fw_login.sh.template" />
+    <None Include="utils\iscsi_offload.sh" />
+    <None Include="utils\iscsi-gen-initiatorname.sh.template" />
+    <None Include="utils\Makefile" />
+    <None Include="utils\meson.build" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

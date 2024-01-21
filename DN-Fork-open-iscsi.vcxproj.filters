@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="doc">
+      <UniqueIdentifier>{EE38B560-8F91-43E3-9ACC-C29CFED047AD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="etc">
+      <UniqueIdentifier>{67EECC72-8C58-41AB-BD9D-257F2D690079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="etc\initd">
+      <UniqueIdentifier>{4D05FDCE-4DB1-4B8A-A4F1-DA118562F1F2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="etc\systemd">
+      <UniqueIdentifier>{723358FB-1F4D-46EE-A7C6-DD1C61A237BA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{11A60328-07EA-436B-A9E9-3B9D4AC77918}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio">
+      <UniqueIdentifier>{57E23578-EDC7-43F8-BEC2-5756283A6BF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\docs">
+      <UniqueIdentifier>{970E06F5-E0B7-4797-9673-AB6BA8837C82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src">
+      <UniqueIdentifier>{82FC4B60-E8DA-484C-B4EF-9727C0C3F33F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src\apps">
+      <UniqueIdentifier>{3C77AF39-4481-405B-B2AC-7D7DECFAEA5B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src\apps\brcm-iscsi">
+      <UniqueIdentifier>{9984B5F6-E2FA-4515-BC2D-9A80C161AB0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src\apps\dhcpc">
+      <UniqueIdentifier>{305AFEB4-58AC-4EAB-8D6F-700AEEDC92CD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src\uip">
+      <UniqueIdentifier>{50778A85-642C-49EE-A214-FDA496CC7F9A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src\unix">
+      <UniqueIdentifier>{2700D658-A4B9-46A5-B6B4-CA2F24C4DAC9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="iscsiuio\src\unix\libs">
+      <UniqueIdentifier>{C7A3DD3A-CB1C-4CE8-AB09-12A1DD7FAE50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libopeniscsiusr">
+      <UniqueIdentifier>{1DE864D1-00DB-46C8-804B-A7B9CD445571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libopeniscsiusr\docs">
+      <UniqueIdentifier>{A417E614-A8E0-41E9-AD00-1995F7F8738A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libopeniscsiusr\libopeniscsiusr">
+      <UniqueIdentifier>{CCABB7DB-4C1B-4B57-BA59-517EC6FAF5DF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libopeniscsiusr\tests">
+      <UniqueIdentifier>{2167B9CA-7148-438E-A46D-58BD1FB210D3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sysdeps">
+      <UniqueIdentifier>{251A8BE8-6686-447E-87B3-B0FCE53F37BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{EB0137DA-61B4-4844-BBE1-22B960C5E3C6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\harness">
+      <UniqueIdentifier>{3E8B0AB3-9EB7-47DC-8E2E-2455EF830AAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr">
+      <UniqueIdentifier>{67B2EB36-88B1-4566-9517-3CC126A4F6C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="usr\fwparam_ibft">
+      <UniqueIdentifier>{8A47DBB7-02E7-45FA-9157-0C67D313BB64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{3446E7AC-6AC7-4644-B8D1-D957D1CF92C6}</UniqueIdentifier>
+    </Filter>
+
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\fw_context.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iscsi_err.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iscsi_if.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iscsi_net_util.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\iscsi_proto.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\list.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sysdeps.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\apps\brcm-iscsi\brcm_iscsi.h">
+      <Filter>iscsiuio\src\apps\brcm-iscsi</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\apps\dhcpc\dhcpc.h">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\apps\dhcpc\dhcpv6.h">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\clock.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\debug.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\icmpv6.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\ipv6.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\ipv6_ndpc.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\ipv6_pkt.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\lc.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\lc-addrlabels.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\lc-switch.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\psock.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\pt.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\timer.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\uip.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\uip_arch.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\uip_arp.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\uip_eth.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\uip-neighbor.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\uip\uipopt.h">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\libs\bnx2.h">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\libs\bnx2x.h">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\libs\cnic.h">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\libs\qedi.h">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\clock-arch.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\iscsid_ipc.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\logger.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\nic.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\nic_id.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\nic_nl.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\nic_utils.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\nic_vlan.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\options.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\packet.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\ping.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="iscsiuio\src\unix\uip-conf.h">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr.h">
+      <Filter>libopeniscsiusr\libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_common.h">
+      <Filter>libopeniscsiusr\libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_iface.h">
+      <Filter>libopeniscsiusr\libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_node.h">
+      <Filter>libopeniscsiusr\libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\libopeniscsiusr\libopeniscsiusr_session.h">
+      <Filter>libopeniscsiusr\libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\context.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\default.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\idbm.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\idbm_fields.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\iface.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\misc.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\node.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\rfc.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="libopeniscsiusr\sysfs.h">
+      <Filter>libopeniscsiusr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\fwparam_ibft\fwparam.h">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\fwparam_ibft\iscsi_obp.h">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\fwparam_ibft\prom_parse.h">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\fwparam_ibft\prom_parse.tab.h">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\actor.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\auth.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\be2iscsi.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\config.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\cxgbi.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\discovery.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\discoveryd.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\ethtool-copy.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\event_poll.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\flashnode.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\host.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\idbm.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\idbm_fields.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iface.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\initiator.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsi_ipc.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsi_netlink.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsi_settings.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsi_sysfs.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsi_timer.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsi_util.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsid.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iscsid_req.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\iser.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\kern_err_table.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\local_strings.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\log.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\mgmt_ipc.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\scsi.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\session_info.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\session_mgmt.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\sysfs.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\transport.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\types.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\uip_mgmt_ipc.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="usr\version.h">
+      <Filter>usr</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\md5.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="iscsiuio\src\apps\brcm-iscsi\brcm_iscsi.c">
+      <Filter>iscsiuio\src\apps\brcm-iscsi</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\apps\dhcpc\dhcpc.c">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\apps\dhcpc\dhcpv6.c">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\ipv6.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\ipv6_ndpc.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\psock.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\timer.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\uip.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\uip_arp.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\uip_eth.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\uip\uip-neighbor.c">
+      <Filter>iscsiuio\src\uip</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\libs\bnx2.c">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\libs\bnx2x.c">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\libs\cnic.c">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\libs\qedi.c">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\clock-arch.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\iscsid_ipc.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\logger.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\main.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\nic.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\nic_id.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\nic_nl.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\nic_utils.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\nic_vlan.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\packet.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="iscsiuio\src\unix\ping.c">
+      <Filter>iscsiuio\src\unix</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\tests\test_context.c">
+      <Filter>libopeniscsiusr\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\tests\test_iface.c">
+      <Filter>libopeniscsiusr\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\tests\test_node.c">
+      <Filter>libopeniscsiusr\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\tests\test_session.c">
+      <Filter>libopeniscsiusr\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\context.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\default.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\idbm.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\iface.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\misc.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\node.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\session.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="libopeniscsiusr\sysfs.c">
+      <Filter>libopeniscsiusr</Filter>
+    </ClCompile>
+    <ClCompile Include="sysdeps\sysdeps.c">
+      <Filter>sysdeps</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\fwparam_ibft\fw_entry.c">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\fwparam_ibft\fwparam_ppc.c">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\fwparam_ibft\fwparam_sysfs.c">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\fwparam_ibft\prom_lex.c">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\fwparam_ibft\prom_parse.tab.c">
+      <Filter>usr\fwparam_ibft</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\actor.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\auth.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\be2iscsi.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\cxgbi.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\discovery.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\discoveryd.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\event_poll.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\flashnode.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\host.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\idbm.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iface.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\initiator.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\initiator_common.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\io.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsi_err.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsi_net_util.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsi_sysfs.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsi_timer.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsi_util.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsiadm.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsid.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsid_req.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iscsistart.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\iser.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\kern_err_table.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\local_strings.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\log.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\login.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\mgmt_ipc.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\mntcheck.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\netlink.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\scsi.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\session_info.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\session_mgmt.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\sysfs.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\transport.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="usr\uip_mgmt_ipc.c">
+      <Filter>usr</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\iscsi-iname.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\md5.c">
+      <Filter>utils</Filter>
+    </ClCompile>
+
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\.gitignore">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsi_discovery.8">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsi_fw_login.8">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsiadm.8.template">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsid.8.template">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsi-gen-initiatorname.8.template">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsi-iname.8.template">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\iscsistart.8.template">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\Makefile">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="doc\meson.build">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="etc\initd\initd.debian">
+      <Filter>etc\initd</Filter>
+    </None>
+    <None Include="etc\initd\initd.redhat">
+      <Filter>etc\initd</Filter>
+    </None>
+    <None Include="etc\systemd\.gitignore">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\ibft-rule-generator">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\iscsi.service.template">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\iscsid.service.template">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\iscsid.socket">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\iscsi-init.service.template">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\iscsiuio.service.template">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\iscsiuio.socket">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\systemd\meson.build">
+      <Filter>etc\systemd</Filter>
+    </None>
+    <None Include="etc\iface.example">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="etc\iscsid.conf">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="etc\Makefile">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="etc\meson.build">
+      <Filter>etc</Filter>
+    </None>
+    <None Include="iscsiuio\docs\iscsiuio.8">
+      <Filter>iscsiuio\docs</Filter>
+    </None>
+    <None Include="iscsiuio\docs\meson.build">
+      <Filter>iscsiuio\docs</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\brcm-iscsi\Makefile.am">
+      <Filter>iscsiuio\src\apps\brcm-iscsi</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\brcm-iscsi\Makefile.brcm-iscsi">
+      <Filter>iscsiuio\src\apps\brcm-iscsi</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\brcm-iscsi\meson.build">
+      <Filter>iscsiuio\src\apps\brcm-iscsi</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\dhcpc\Makefile.am">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\dhcpc\Makefile.dhcpc">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\dhcpc\meson.build">
+      <Filter>iscsiuio\src\apps\dhcpc</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\Makefile.am">
+      <Filter>iscsiuio\src\apps</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\meson.build">
+      <Filter>iscsiuio\src\apps</Filter>
+    </None>
+    <None Include="iscsiuio\src\apps\README">
+      <Filter>iscsiuio\src\apps</Filter>
+    </None>
+    <None Include="iscsiuio\src\uip\Makefile.am">
+      <Filter>iscsiuio\src\uip</Filter>
+    </None>
+    <None Include="iscsiuio\src\uip\Makefile.include">
+      <Filter>iscsiuio\src\uip</Filter>
+    </None>
+    <None Include="iscsiuio\src\uip\meson.build">
+      <Filter>iscsiuio\src\uip</Filter>
+    </None>
+    <None Include="iscsiuio\src\unix\libs\Makefile.am">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </None>
+    <None Include="iscsiuio\src\unix\libs\meson.build">
+      <Filter>iscsiuio\src\unix\libs</Filter>
+    </None>
+    <None Include="iscsiuio\src\unix\.gitignore">
+      <Filter>iscsiuio\src\unix</Filter>
+    </None>
+    <None Include="iscsiuio\src\unix\build_date.sh">
+      <Filter>iscsiuio\src\unix</Filter>
+    </None>
+    <None Include="iscsiuio\src\unix\Makefile.am">
+      <Filter>iscsiuio\src\unix</Filter>
+    </None>
+    <None Include="iscsiuio\src\unix\meson.build">
+      <Filter>iscsiuio\src\unix</Filter>
+    </None>
+    <None Include="iscsiuio\src\.gitignore">
+      <Filter>iscsiuio\src</Filter>
+    </None>
+    <None Include="iscsiuio\src\Makefile.am">
+      <Filter>iscsiuio\src</Filter>
+    </None>
+    <None Include="iscsiuio\src\meson.build">
+      <Filter>iscsiuio\src</Filter>
+    </None>
+    <None Include="iscsiuio\src\README">
+      <Filter>iscsiuio\src</Filter>
+    </None>
+    <None Include="iscsiuio\src\uip-1.0-changelog.txt">
+      <Filter>iscsiuio\src</Filter>
+    </None>
+    <None Include="iscsiuio\.gitignore">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\AUTHORS">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\ChangeLog">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\configure.ac">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\INSTALL">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\iscsiuiolog">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\Makefile.am">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\meson.build">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\NEWS">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\README">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="iscsiuio\RELEASE.TXT">
+      <Filter>iscsiuio</Filter>
+    </None>
+    <None Include="libopeniscsiusr\docs\kernel-doc">
+      <Filter>libopeniscsiusr\docs</Filter>
+    </None>
+    <None Include="libopeniscsiusr\docs\libopeniscsiusr.h.3">
+      <Filter>libopeniscsiusr\docs</Filter>
+    </None>
+    <None Include="libopeniscsiusr\docs\list-man-pages.sh">
+      <Filter>libopeniscsiusr\docs</Filter>
+    </None>
+    <None Include="libopeniscsiusr\docs\meson.build">
+      <Filter>libopeniscsiusr\docs</Filter>
+    </None>
+    <None Include="libopeniscsiusr\libopeniscsiusr\meson.build">
+      <Filter>libopeniscsiusr\libopeniscsiusr</Filter>
+    </None>
+    <None Include="libopeniscsiusr\tests\meson.build">
+      <Filter>libopeniscsiusr\tests</Filter>
+    </None>
+    <None Include="libopeniscsiusr\tests\runtest.sh">
+      <Filter>libopeniscsiusr\tests</Filter>
+    </None>
+    <None Include="libopeniscsiusr\COPYING">
+      <Filter>libopeniscsiusr</Filter>
+    </None>
+    <None Include="libopeniscsiusr\libopeniscsiusr.pc.in">
+      <Filter>libopeniscsiusr</Filter>
+    </None>
+    <None Include="libopeniscsiusr\Makefile">
+      <Filter>libopeniscsiusr</Filter>
+    </None>
+    <None Include="libopeniscsiusr\meson.build">
+      <Filter>libopeniscsiusr</Filter>
+    </None>
+    <None Include="libopeniscsiusr\TODO">
+      <Filter>libopeniscsiusr</Filter>
+    </None>
+    <None Include="sysdeps\Makefile">
+      <Filter>sysdeps</Filter>
+    </None>
+    <None Include="sysdeps\meson.build">
+      <Filter>sysdeps</Filter>
+    </None>
+    <None Include="test\harness\.gitignore">
+      <Filter>test\harness</Filter>
+    </None>
+    <None Include="test\harness\__init__.py">
+      <Filter>test\harness</Filter>
+    </None>
+    <None Include="test\harness\iscsi.py">
+      <Filter>test\harness</Filter>
+    </None>
+    <None Include="test\harness\tests.py">
+      <Filter>test\harness</Filter>
+    </None>
+    <None Include="test\harness\util.py">
+      <Filter>test\harness</Filter>
+    </None>
+    <None Include="test\.gitignore">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\README">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\README.orig">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\regression.dat">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\regression.sh">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\test-open-iscsi.py">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\TODO">
+      <Filter>test</Filter>
+    </None>
+    <None Include="usr\fwparam_ibft\Makefile">
+      <Filter>usr\fwparam_ibft</Filter>
+    </None>
+    <None Include="usr\fwparam_ibft\meson.build">
+      <Filter>usr\fwparam_ibft</Filter>
+    </None>
+    <None Include="usr\fwparam_ibft\prom_lex.l">
+      <Filter>usr\fwparam_ibft</Filter>
+    </None>
+    <None Include="usr\fwparam_ibft\prom_parse.y">
+      <Filter>usr\fwparam_ibft</Filter>
+    </None>
+    <None Include="usr\fwparam_ibft\README">
+      <Filter>usr\fwparam_ibft</Filter>
+    </None>
+    <None Include="usr\.gitignore">
+      <Filter>usr</Filter>
+    </None>
+    <None Include="usr\Makefile">
+      <Filter>usr</Filter>
+    </None>
+    <None Include="usr\meson.build">
+      <Filter>usr</Filter>
+    </None>
+    <None Include="utils\.gitignore">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\50-iscsi-firmware-login.rules.template">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\iscsi_discovery.sh">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\iscsi_fw_login.sh.template">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\iscsi_offload.sh">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\iscsi-gen-initiatorname.sh.template">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\Makefile">
+      <Filter>utils</Filter>
+    </None>
+    <None Include="utils\meson.build">
+      <Filter>utils</Filter>
+    </None>
+
+  </ItemGroup>
+</Project>

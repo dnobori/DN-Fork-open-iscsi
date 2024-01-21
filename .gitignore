@@ -19,3 +19,4 @@ libopeniscsiusr/tests/test_iface
 libopeniscsiusr/tests/test_node
 # used for testing
 .setup
+/.vs/
